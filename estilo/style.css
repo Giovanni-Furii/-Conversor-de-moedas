@@ -1,0 +1,213 @@
+header{
+    margin-top: 10px;
+    margin-right: -100px;
+    margin-left: 1px;
+    margin-bottom: 40px;
+    display:flex;
+    color: black;
+    background-image:linear-gradient(to right , #4fffdc , #3fccb0 , #109c80);
+    align-items: center;
+    font-family: 'Blaka Ink', cursive;
+
+}
+
+h1{
+    margin-right: -100px;
+    font-family: 'Blaka Ink', cursive;
+    background-image: linear-gradient(to left , rgba(255, 255, 255, 0.514) , rgba(255, 255, 255, 0.959));
+
+}
+
+div ul li{
+    padding-left: 100px;
+    display: inline-flex;
+    color:grey;
+    font-size:x-large;
+    width: 120px;
+    height: 20px;
+}
+
+.inicio{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#input-number {
+    width: 300px;
+    height: 50px;
+}
+
+label{
+    display: flex;
+    align-items:center ;
+    justify-content: left;
+    justify-items: left;
+    margin-top: 20px;
+    font-size: large;
+    color:rgb(7, 122, 7) ;
+}
+#btnConverter{
+    background-color: blueviolet;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 150px;
+    height: 50px;
+}
+
+#btnLimpar{
+    background-color: blueviolet;
+    width: 150px;
+    height: 50px;
+}
+
+body.dark {
+    background: #292c35;
+  }
+
+.dark{
+    color:white
+}
+
+.inicio p{
+    background-image:linear-gradient(to right , grey ,white , rgb(88, 80, 80));
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    font-size: x-large;
+    color: black;
+}
+
+ #animaDiv{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+ }
+
+ #bitAnima{
+    height: 200px;
+    margin-left: 20px;
+  }
+
+  #dolarAnima{
+    height: 200px;
+  }
+
+
+  #imgMoedas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+@keyframes piscar {
+    0% {
+        
+        filter: drop-shadow(0 0 25px #ffc107);
+        -webkit-filter: drop-shadow(0 0 25px #ffc107);
+        -moz-filter: drop-shadow(0 0 25px #ffc107);
+        -o-filter: drop-shadow(0 0 25px #ffc107);
+        -ms-filter: drop-shadow(0 0 25px #ffc107);
+    }
+    100% {
+    }
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 0; 
+    }
+    from {
+        opacity: 1; 
+    }
+}
+
+.animar {
+    animation: piscar 0.5s infinite alternate;
+}
+
+.aparecer {
+    animation: aparecer 1.0s ease-in;
+}
+
+#myBtn{
+background-color: #38322e;
+border-radius: 65px;
+bottom: 14px;
+box-shadow: 2px 3px 19px -2px rgba(0, 0, 0, .75);
+color: #d9a000;
+font-size: 30px;
+cursor: pointer;
+height: 40px;
+position: fixed;
+right: 22px;
+width: 40px;
+z-index: 3;
+}
+
+.contCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide{
+    display: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+
+#texto-sobre {
+    justify-content: center;
+    align-items:center;
+    font-family: 'Rubik Dirt', cursive;
+    font-size: 30px;
+}
+
+
+#imgsobre img{
+    display: flex;
+    margin-left: 300px;
+    margin-top: 40px;
+    width: 400px;
+    height: 500px;    
+}
+
+
+
+#gitdiv2{
+    display:flex;
+    margin-left: 10px;
+  
+}
+
+#texto-contato{
+    display: flex;
+}
+
+.zap{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    
+}
+
+.git{
+    display: flex;
+    height: 50px;
+    width: 50px;
+    margin-left: 90px;
+}
+
+
+  
+ 
+  
+
+    
