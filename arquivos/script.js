@@ -239,7 +239,7 @@ body.appendChild(sobreConteudo);
 const textoSobre = document.createElement('p');
 textoSobre.setAttribute('id', 'texto-sobre');
 textoSobre.setAttribute('class' , 'sobre');
-textoSobre.innerText='Esta pagina foi desenvolvida com o intuito de auxiliar na conversãodo real para outras moedas , a pagina possui uma api que atualiza o valor das moedas a cada 30 segundos. A pagina possui botões que trocam o conteudo sem dar reload na pagina , possui um botão que volta ao topo da pagina. '
+textoSobre.innerText='Esta pagina foi desenvolvida com o intuito de auxiliar na conversão do real para outras moedas , a pagina possui uma api que atualiza o valor das moedas a cada 30 segundos. A pagina possui botões que trocam o conteudo sem dar reload na pagina , possui um botão que volta ao topo da pagina e muito mais. '
 sobreConteudo.appendChild(textoSobre);
 
 const imgSobre = document.createElement('div')
