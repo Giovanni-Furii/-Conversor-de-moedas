@@ -325,8 +325,7 @@ async function converta3() {
     var realValor =document.getElementById('input-number');
     var api = valor['BTCBRL']['bid'];
     realValor2=Number(realValor.value) * api;
-    realValor3=realValor2.toFixed(2)
-   res.innerHTML=`<p>Convertendo temos : ${realValor3} ฿ </p>`;
+   res.innerHTML=`<p>Convertendo temos : ${realValor2} ฿ </p>`;
    
 }
 
