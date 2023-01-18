@@ -26,57 +26,91 @@ menuContainer.appendChild(ul);
 const principal = document.createElement('li');
 principal.setAttribute('id', 'menu0')
 ul.appendChild(principal);
-principal.innerHTML='<input type="checkbox" id="btnPrin">Principal</input>';
+principal.innerHTML='<h3 id="btnPrin" class="principal">Principal</h3>';
 
 var btn1 = document.getElementById("btnPrin");
 
 
-btn1.addEventListener("change" , function(){
-    var removeCont =document.getElementById("contContainer");
-    removeCont.classList.toggle("hide");
-    
-})
-btn1.addEventListener("change" , function(){
-    var removeCont2 =document.getElementById("sobreCont");
-    removeCont2.classList.toggle("hide");
-    })
+btn1.addEventListener('click' , function(e){
+    el = e.target;
+    if(el.classList.contains('principal')){
+        var addInicio =document.getElementById("inicio");
+        var removeContato =document.getElementById("contContainer");
+        var removeSobre =document.getElementById("sobreCont");
+        var telaPrincipal =document.getElementById("btnPrin");
+        var telaSobre =document.getElementById("btnSob");
+        var telaContato =document.getElementById("btnContato");
+
+        addInicio.style.display="flex";
+        removeContato.style.display="none"
+        removeSobre.style.display = "none";
+
+        telaSobre.style.color="grey"
+        telaPrincipal.style.color="red"
+        telaContato.style.color="grey"
+
+}})
+
 
 
 const sobre = document.createElement('li');
 sobre.setAttribute('id' , 'menu1');
 ul.appendChild(sobre);
-sobre.innerHTML='<input type="checkbox" id="btnSob" name= "ovo">Sobre</input';
+sobre.innerHTML='<h3 id="btnSob" class="sobre" name= "ovo">Sobre</h3>';
 
 var btn2 = document.getElementById("btnSob");
 
 
-btn2.addEventListener("change" , function(){
-    var removeCont =document.getElementById("inicio");
-    removeCont.classList.toggle("hide");
+btn2.addEventListener("click" , function(e){
+    el = e.target;
+    if(el.classList.contains('sobre')){
+        var apresentaSobre =document.getElementById("sobreCont");
+        var removeContato =document.getElementById("contContainer");
+        var removeInicio =document.getElementById("inicio");
+        var telaPrincipal =document.getElementById("btnPrin");
+        var telaSobre =document.getElementById("btnSob");
+        var telaContato =document.getElementById("btnContato");
+
+        apresentaSobre.style.display="flex";
+        removeContato.style.display="none"
+        removeInicio.style.display="none"
+        
+        telaSobre.style.color="red"
+        telaPrincipal.style.color="grey"
+        telaContato.style.color="grey"
     
-})
-btn2.addEventListener("change" , function(){
-    var removeCont2 =document.getElementById("contContainer");
-    removeCont2.classList.toggle("hide");
-    })
+}})
+
 
 const faleConosco = document.createElement('li');
 faleConosco.setAttribute('id' , 'menu2');
 ul.appendChild(faleConosco);
-faleConosco.innerHTML='<input type="checkbox" id="btnContato" name= "ovo" >Contato</input';
+faleConosco.innerHTML='<h3 id="btnContato" class="contato" name= "ovo" >Contato</h3>';
 
 var btn3 = document.getElementById("btnContato");
 
 
-btn3.addEventListener("change" , function(){
-    var removeCont =document.getElementById("sobreCont");
-    removeCont.classList.toggle("hide");
+btn3.addEventListener("click" , function(e){
+    el = e.target;
     
-})
-btn3.addEventListener("change" , function(){
-    var removeCont2 =document.getElementById("inicio");
-    removeCont2.classList.toggle("hide");
-    })
+    if(el.classList.contains('contato')){
+        var apresentaContato =document.getElementById("contContainer");
+        var removeSobre =document.getElementById("sobreCont");
+        var removeInicio =document.getElementById("inicio");
+        var telaPrincipal =document.getElementById("btnPrin");
+        var telaSobre =document.getElementById("btnSob");
+        var telaContato =document.getElementById("btnContato");
+
+        apresentaContato.style.display="flex";
+        removeInicio.style.display="none";
+        removeSobre.style.display = "none";
+
+        telaSobre.style.color="grey"
+        telaPrincipal.style.color="grey"
+        telaContato.style.color="red"
+    
+}})
+
 
 //Modo escuro
 const dark = document.createElement('li');
@@ -239,7 +273,7 @@ body.appendChild(sobreConteudo);
 const textoSobre = document.createElement('p');
 textoSobre.setAttribute('id', 'texto-sobre');
 textoSobre.setAttribute('class' , 'sobre');
-textoSobre.innerText='Esta pagina foi desenvolvida com o intuito de auxiliar na conversão do real para outras moedas , a pagina possui uma api que atualiza o valor das moedas a cada 30 segundos. A pagina possui botões que trocam o conteudo sem dar reload na pagina , possui um botão que volta ao topo da pagina e muito mais. '
+textoSobre.innerText='Esta pagina foi desenvolvida com o intuito de auxiliar na conversãodo real para outras moedas , a pagina possui uma api que atualiza o valor das moedas a cada 30 segundos. A pagina possui botões que trocam o conteudo sem dar reload na pagina , possui um botão que volta ao topo da pagina. '
 sobreConteudo.appendChild(textoSobre);
 
 const imgSobre = document.createElement('div')
@@ -306,7 +340,7 @@ function getSeleciona(){
 async function converta1() {
     var realValor =document.getElementById('input-number');
     var api = valor['EURBRL']['bid'];
-    realValor2=Number(realValor.value) * api;
+    realValor2=Number(realValor.value) / api;
     realValor3=realValor2.toFixed(2)
    res.innerHTML=`<p>Conertendo temos : ${realValor3} € </p>`;
    
@@ -315,7 +349,7 @@ async function converta1() {
 async function converta2() {
     var realValor =document.getElementById('input-number');
     var api = valor['USDBRL']['bid'];
-    realValor2=Number(realValor.value) * api;
+    realValor2=Number(realValor.value) / api;
     realValor3=realValor2.toFixed(2)
    res.innerHTML=`<p> Convertendo temos: ${realValor3} US$ </p>`;
    
@@ -324,8 +358,9 @@ async function converta2() {
 async function converta3() {
     var realValor =document.getElementById('input-number');
     var api = valor['BTCBRL']['bid'];
-    realValor2=Number(realValor.value) * api;
-   res.innerHTML=`<p>Convertendo temos : ${realValor2} ฿ </p>`;
+    realValor2=Number(realValor.value) / api;
+    realValor3=realValor2.toFixed(2)
+   res.innerHTML=`<p>Convertendo temos : ${realValor3} ฿ </p>`;
    
 }
 
