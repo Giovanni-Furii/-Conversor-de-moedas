@@ -1,3 +1,10 @@
+body{
+    background-color: #08AEEA;
+background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+;
+    
+}
+
 header{
     margin-top: 10px;
     margin-right: -100px;
@@ -5,9 +12,10 @@ header{
     margin-bottom: 40px;
     display:flex;
     color: black;
-    background-image:linear-gradient(to right , #4fffdc , #3fccb0 , #109c80);
+    
     align-items: center;
     font-family: 'Blaka Ink', cursive;
+    
 
 }
 
@@ -25,6 +33,7 @@ div ul li{
     font-size:x-large;
     width: 120px;
     height: 20px;
+    cursor: pointer;
 }
 
 .inicio{
@@ -155,9 +164,15 @@ z-index: 3;
     align-items: center;
     justify-content: center;
 }
+#inicio{
+    display: flex;
+}
+#sobreCont{
+    display:none
+}
 
-.hide{
-    display: none;
+#contContainer{
+    display: none
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
@@ -204,6 +219,17 @@ z-index: 3;
     width: 50px;
     margin-left: 90px;
 }
+
+#btnPrin{
+    color: red;
+}
+
+
+  
+ 
+  
+
+    
 
 
   
